@@ -3,24 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0407A10D2774A301004122B9 /* CalenderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407A10C2774A301004122B9 /* CalenderTableViewController.swift */; };
+		0407A10F2774A350004122B9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407A10E2774A350004122B9 /* CustomTableViewCell.swift */; };
+		0407A1182774AFFB004122B9 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407A1172774AFFB004122B9 /* ChartViewController.swift */; };
+		04933DA427754253006F225E /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 04933DA327754253006F225E /* Charts */; };
 		04AFC784277494550012F0BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFC783277494550012F0BE /* AppDelegate.swift */; };
 		04AFC786277494550012F0BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFC785277494550012F0BE /* SceneDelegate.swift */; };
-		04AFC788277494550012F0BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFC787277494550012F0BE /* ViewController.swift */; };
 		04AFC78B277494550012F0BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AFC789277494550012F0BE /* Main.storyboard */; };
 		04AFC78E277494550012F0BE /* Time_Visualizer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04AFC78C277494550012F0BE /* Time_Visualizer.xcdatamodeld */; };
 		04AFC790277494580012F0BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04AFC78F277494580012F0BE /* Assets.xcassets */; };
 		04AFC793277494580012F0BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AFC791277494580012F0BE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0407A1162774AD07004122B9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0407A10C2774A301004122B9 /* CalenderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderTableViewController.swift; sourceTree = "<group>"; };
+		0407A10E2774A350004122B9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		0407A1172774AFFB004122B9 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		04AFC780277494550012F0BE /* Time Visualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Visualizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AFC783277494550012F0BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04AFC785277494550012F0BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04AFC787277494550012F0BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04AFC78A277494550012F0BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04AFC78D277494550012F0BE /* Time_Visualizer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Time_Visualizer.xcdatamodel; sourceTree = "<group>"; };
 		04AFC78F277494580012F0BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04933DA427754253006F225E /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,8 +79,10 @@
 			children = (
 				04AFC783277494550012F0BE /* AppDelegate.swift */,
 				04AFC785277494550012F0BE /* SceneDelegate.swift */,
-				04AFC787277494550012F0BE /* ViewController.swift */,
 				04AFC789277494550012F0BE /* Main.storyboard */,
+				0407A1172774AFFB004122B9 /* ChartViewController.swift */,
+				0407A10C2774A301004122B9 /* CalenderTableViewController.swift */,
+				0407A10E2774A350004122B9 /* CustomTableViewCell.swift */,
 				04AFC78F277494580012F0BE /* Assets.xcassets */,
 				04AFC791277494580012F0BE /* LaunchScreen.storyboard */,
 				04AFC794277494580012F0BE /* Info.plist */,
@@ -80,12 +101,16 @@
 				04AFC77C277494550012F0BE /* Sources */,
 				04AFC77D277494550012F0BE /* Frameworks */,
 				04AFC77E277494550012F0BE /* Resources */,
+				0407A1162774AD07004122B9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Time Visualizer";
+			packageProductDependencies = (
+				04933DA327754253006F225E /* Charts */,
+			);
 			productName = "Time Visualizer";
 			productReference = 04AFC780277494550012F0BE /* Time Visualizer.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +138,9 @@
 				Base,
 			);
 			mainGroup = 04AFC777277494550012F0BE;
+			packageReferences = (
+				04933DA227754253006F225E /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 04AFC781277494550012F0BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,9 +169,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AFC78E277494550012F0BE /* Time_Visualizer.xcdatamodeld in Sources */,
-				04AFC788277494550012F0BE /* ViewController.swift in Sources */,
+				0407A10F2774A350004122B9 /* CustomTableViewCell.swift in Sources */,
 				04AFC784277494550012F0BE /* AppDelegate.swift in Sources */,
 				04AFC786277494550012F0BE /* SceneDelegate.swift in Sources */,
+				0407A10D2774A301004122B9 /* CalenderTableViewController.swift in Sources */,
+				0407A1182774AFFB004122B9 /* ChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +375,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04933DA227754253006F225E /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = exactVersion;
+				version = 3.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04933DA327754253006F225E /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04933DA227754253006F225E /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		04AFC78C277494550012F0BE /* Time_Visualizer.xcdatamodeld */ = {

@@ -1,24 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gbd-Ac-GhL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Time Visualizer-->
+        <scene sceneID="krm-ua-P9m">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="siH-DS-6gf" customClass="CalenderTableViewController" customModule="Time_Visualizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2GN-Os-zNM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" rowHeight="91" id="YBc-6n-vbj" customClass="CustomTableViewCell" customModule="Time_Visualizer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="91"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YBc-6n-vbj" id="eG5-KA-j8T">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNH-cE-bOa">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIH-VP-HWS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="91"/>
+                                                    <color key="tintColor" red="1" green="0.27231035329999997" blue="0.65051570869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="0.27231035329999997" blue="0.65051570869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="1" green="0.27231035329999997" blue="0.65051570869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2L3-ul-yfz">
+                                                    <rect key="frame" x="41.5" y="0.0" width="331" height="91"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OB7-K3-XNU">
+                                                    <rect key="frame" x="372.5" y="0.0" width="41.5" height="91"/>
+                                                    <color key="tintColor" red="1" green="0.27231035331128239" blue="0.65051570865774755" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal">
+                                                        <imageReference key="image" image="plus" catalog="system" symbolScale="small"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="addButton:" destination="YBc-6n-vbj" eventType="touchUpInside" id="46j-sD-73g"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OB7-K3-XNU" firstAttribute="width" secondItem="jNH-cE-bOa" secondAttribute="width" multiplier="0.1" id="A7s-NA-r5A"/>
+                                                <constraint firstItem="HIH-VP-HWS" firstAttribute="width" secondItem="jNH-cE-bOa" secondAttribute="width" multiplier="0.1" id="K5n-ZG-ydi"/>
+                                                <constraint firstItem="2L3-ul-yfz" firstAttribute="width" secondItem="jNH-cE-bOa" secondAttribute="width" multiplier="0.8" id="oGc-rh-FgO"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="jNH-cE-bOa" secondAttribute="trailing" id="OXM-GQ-QTI"/>
+                                        <constraint firstItem="jNH-cE-bOa" firstAttribute="top" secondItem="eG5-KA-j8T" secondAttribute="top" id="ehA-Yp-GJe"/>
+                                        <constraint firstAttribute="bottom" secondItem="jNH-cE-bOa" secondAttribute="bottom" id="f3v-7Y-bvb"/>
+                                        <constraint firstItem="jNH-cE-bOa" firstAttribute="leading" secondItem="eG5-KA-j8T" secondAttribute="leading" id="yPJ-ta-R2U"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="hourLabel" destination="HIH-VP-HWS" id="YNe-gQ-iEu"/>
+                                    <outlet property="taskTextField" destination="2L3-ul-yfz" id="8S0-kq-mhn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="siH-DS-6gf" id="SfD-2Z-1e8"/>
+                            <outlet property="delegate" destination="siH-DS-6gf" id="oC7-ut-CRJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Time Visualizer" id="HcF-jE-EoL">
+                        <barButtonItem key="rightBarButtonItem" title="Progress" id="Sjt-jm-JWv">
+                            <color key="tintColor" red="1" green="0.27231035329999997" blue="0.65051570869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="progressButtonPressed:" destination="siH-DS-6gf" id="BjH-e7-bYS"/>
+                                <segue destination="zml-Xw-LqX" kind="presentation" identifier="chart" modalPresentationStyle="fullScreen" id="Kb0-0B-L7d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tb4-hC-hap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="881.15942028985512" y="83.705357142857139"/>
+        </scene>
+        <!--Chart View Controller-->
+        <scene sceneID="5Dg-lf-le4">
+            <objects>
+                <viewController id="zml-Xw-LqX" customClass="ChartViewController" customModule="Time_Visualizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="etY-pl-8wD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1n8-bp-QVB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LTQ-60-QwD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1n8-bp-QVB" firstAttribute="leading" secondItem="LTQ-60-QwD" secondAttribute="leading" id="DFb-Nh-zXw"/>
+                            <constraint firstItem="1n8-bp-QVB" firstAttribute="top" secondItem="LTQ-60-QwD" secondAttribute="top" id="bh4-6T-B2U"/>
+                            <constraint firstItem="LTQ-60-QwD" firstAttribute="trailing" secondItem="1n8-bp-QVB" secondAttribute="trailing" id="fhL-zL-zz3"/>
+                            <constraint firstItem="LTQ-60-QwD" firstAttribute="bottom" secondItem="1n8-bp-QVB" secondAttribute="bottom" id="s4w-eG-fJC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chartView" destination="1n8-bp-QVB" id="x0k-si-7uD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nKO-IX-z6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853" y="74"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KvY-kf-WI8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gbd-Ac-GhL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V3a-WE-Isu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.27231035329999997" blue="0.65051570869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="siH-DS-6gf" kind="relationship" relationship="rootViewController" id="oay-UZ-VAN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T2l-hh-bZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28.985507246376812" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
